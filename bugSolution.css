@@ -1,0 +1,11 @@
+The correct way to achieve the desired effect is to use percentages or lengths directly within the `linear-gradient` function:
+
+```css
+.element {
+  background-image: linear-gradient(to right, red, blue);
+  background-size: calc(100% - 50px) 100%;
+  background-repeat: no-repeat;
+}
+```
+
+This solution sets the background image to a simple red-to-blue gradient and uses `background-size` to control the gradient's visible area. By setting the width to `calc(100% - 50px)`, the gradient only occupies the area that is 50 pixels short of the right edge. `background-repeat: no-repeat` prevents the gradient from repeating.
