@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates an uncommon error related to the usage of the `calc()` function within a `linear-gradient`:
+
+```css
+.element {
+  background-image: linear-gradient(to right, red, calc(100% - 50px) blue);
+}
+```
+
+This code intends to create a gradient that starts red and transitions to blue at a point 50 pixels from the right edge. However, the `calc()` function is not correctly used within the `linear-gradient` function's color-stop definitions. The `calc()` function can only be used for lengths, not for color stops.  It causes unexpected behavior or errors in some browsers.
